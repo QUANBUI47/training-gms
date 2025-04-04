@@ -1,0 +1,134 @@
+1. String Interpolation
+Trong phiên bản ES6 của JavaScript, chúng ta có thể chèn (hay gọi là nội suy) các biến vào trong chuỗi bằng cách sử dụng template literals (chuỗi mẫu).
+Một template literal được bao quanh bởi dấu backtick (`), phím này thường nằm ở phía trên bàn phím, bên trái phím số 1.
+
+Bên trong chuỗi mẫu, bạn sẽ thấy một phần chèn giá trị ${myPet}. Giá trị của biến myPet sẽ được chèn vào chuỗi mẫu.
+
+Khi chúng ta nội suy chuỗi I own a pet ${myPet}., kết quả in ra sẽ là: 'I own a pet armadillo.'
+
+Một trong những lợi ích lớn nhất khi sử dụng chuỗi mẫu là tính dễ đọc của mã nguồn. Khi dùng chuỗi mẫu, bạn có thể dễ dàng nhìn thấy chuỗi mới sẽ như thế nào. Bạn cũng không cần lo lắng về việc phải thoát dấu nháy đơn hay dấu nháy kép trong chuỗi.
+
+2. typeof operator
+Khi viết mã, đôi khi bạn cần theo dõi kiểu dữ liệu của các biến trong chương trình. Nếu bạn cần kiểm tra kiểu dữ liệu của giá trị một biến, bạn có thể sử dụng toán tử typeof.
+
+Toán tử typeof sẽ kiểm tra giá trị ở bên phải nó và trả về một chuỗi biểu thị kiểu dữ liệu đó.
+
+TEST
+3. Kelvin Weather
+Với kiến thức JavaScript của chúng ta, hãy viết mã để chuyển đổi từ Kelvin sang Celsius, sau đó từ Celsius sang Fahrenheit
+// kelvin
+const kelvin = 0;
+// kelvin to celsius
+const celsius = kelvin - 273;
+let fahrenheit = celsius * (9/5) + 32;
+fahrenheit = Math.floor(fahrenheit);
+let newton = celsius * (33/100);
+newton = Math.floor(newton);
+console.log(`The temperature is ${fahrenheit} degrees Fahrenheit.`)
+console.log(`The temperature is ${newton} degrees Newton.`);
+
+
+4.Dog Years
+Chó phát triển nhanh hơn con người rất nhiều. Chúng ta thường nói rằng tuổi của chó được tính theo “năm tuổi chó” để phản ánh sự trưởng thành nhanh chóng của chúng. Có thể nói thời gian trôi nhanh hơn với chó — ví dụ: 8 năm tuổi người tương đương với 45 năm tuổi chó.
+
+Vậy nếu bạn là một chú chó thì bạn bao nhiêu tuổi?
+
+
+// my age
+let myAge = 21;
+// early years
+let earlyYears = 2;
+earlyYears *= 10.5;
+let laterYears = myAge - 2;
+// calculate the nb of dog years accounted for by your later years
+laterYears *= 4;
+console.log(earlyYears);
+console.log(laterYears);
+// humanYears to dogYears
+const myAgeInDogYears = earlyYears + laterYears;
+// Name to lowercase
+let myName = 'Quan'.toLowerCase();
+console.log(`My name is ${myName}. I am ${myAge} years old in human years which is ${myAgeInDogYears} years old in dog years.`);
+
+5. If Statement
+Trong lập trình, chúng ta cũng có thể thực hiện một tác vụ dựa trên một điều kiện bằng cách sử dụng câu lệnh if.
+Từ khóa if theo sau là một cặp dấu ngoặc đơn () và tiếp theo là một khối mã, hay block statement, được chỉ ra bằng một cặp dấu ngoặc nhọn {}.
+
+Bên trong dấu ngoặc đơn (), có một điều kiện được cung cấp, điều kiện này sẽ được đánh giá là đúng (true) hoặc sai (false).
+
+Nếu điều kiện được đánh giá là đúng (true), mã trong dấu ngoặc nhọn {} sẽ chạy, hay thực thi.
+
+Nếu điều kiện được đánh giá là sai (false), khối mã sẽ không thực thi.
+
+6. If Else Statements
+Trong nhiều trường hợp, chúng ta sẽ có mã mà chúng ta muốn chạy nếu điều kiện đó đánh giá là false.
+
+Nếu chúng ta muốn thêm hành vi mặc định cho câu lệnh if, chúng ta có thể thêm một câu lệnh else để chạy một khối mã khi điều kiện đánh giá là false. 
+Sử dụng từ khóa else theo sau khối mã của câu lệnh if.
+
+Có một khối mã được bao bọc bởi một cặp dấu ngoặc nhọn {}.
+
+Mã bên trong khối mã của câu lệnh else sẽ thực thi khi điều kiện của câu lệnh if đánh giá là false.
+
+7. Comparison Operators
+Khi viết các câu lệnh điều kiện, đôi khi chúng ta cần sử dụng các loại toán tử khác nhau để so sánh các giá trị. Các toán tử này được gọi là toán tử so sánh.
+
+8. Logical Operators
+Khi làm việc với câu lệnh điều kiện, chúng ta sẽ sử dụng các giá trị boolean, tức là các giá trị đúng (true) hoặc sai (false). Trong JavaScript, có các toán tử logic hoạt động với các giá trị boolean. Chúng ta có thể sử dụng toán tử logic để thêm vào những logic phức tạp hơn cho các câu lệnh điều kiện của mình. Có ba toán tử logic:
+
+Toán tử và (&&)
+
+Toán tử hoặc (||)
+
+Toán tử phủ định, còn gọi là toán tử bang (!)
+
+9. Truthy and falsy
+Đôi khi, bạn sẽ muốn kiểm tra xem một biến có tồn tại hay không và không nhất thiết phải kiểm tra xem nó có bằng một giá trị cụ thể hay không — bạn chỉ cần kiểm tra xem biến đã được gán giá trị hay chưa.
+Danh sách các giá trị falsy:
+
+0
+
+Chuỗi rỗng như "" hoặc ''
+
+null, đại diện cho khi không có giá trị
+
+undefined, đại diện cho khi một biến đã được khai báo nhưng chưa có giá trị
+
+NaN, hoặc Not a Number
+
+10. Truthy and Falsy Assignment
+Việc sử dụng các phép đánh giá truthy và falsy mở ra nhiều khả năng viết ngắn gọn!
+Nếu bạn kết hợp kiến thức về các toán tử logic, bạn có thể sử dụng cách viết ngắn gọn.
+
+11. Ternary Operator
+Trong tinh thần sử dụng cú pháp ngắn gọn, chúng ta có thể sử dụng toán tử ternary để đơn giản hóa một câu lệnh if...else.
+
+Điều kiện được cung cấp trước dấu ?.
+
+Hai biểu thức theo sau dấu ? và được phân cách bởi dấu ::
+
+Nếu điều kiện đánh giá là đúng (true), biểu thức đầu tiên sẽ được thực thi.
+
+Nếu điều kiện đánh giá là sai (false), biểu thức thứ hai sẽ được thực thi.
+
+Giống như câu lệnh if...else, toán tử ternary có thể được sử dụng cho các điều kiện đánh giá là true hoặc false.
+
+12. Else If Statements
+Chúng ta có thể thêm nhiều điều kiện vào câu lệnh if...else bằng cách sử dụng câu lệnh else if. Câu lệnh else if cho phép có nhiều kết quả có thể xảy ra. Bạn có thể thêm nhiều câu lệnh else if để tạo ra các điều kiện phức tạp hơn!
+
+Câu lệnh else if luôn đi sau câu lệnh if và trước câu lệnh else. Câu lệnh else if cũng yêu cầu một điều kiện.
+
+13. The switch keyword
+Câu lệnh else if là một công cụ tuyệt vời nếu chúng ta cần kiểm tra nhiều điều kiện. Trong lập trình, chúng ta thường gặp phải tình huống cần kiểm tra nhiều giá trị và xử lý mỗi giá trị theo cách khác nhau.
+Việc phải viết nhiều câu lệnh else if như vậy sẽ rất phiền phức!
+
+Một câu lệnh switch cung cấp một cú pháp thay thế dễ đọc và dễ viết hơn
+Từ khóa switch bắt đầu câu lệnh và được theo sau bởi ( ... ), trong đó chứa giá trị mà mỗi case sẽ so sánh.
+
+Bên trong khối { ... }, có nhiều case. Từ khóa case kiểm tra nếu biểu thức khớp với giá trị được chỉ định sau nó. Ví dụ, giá trị sau case đầu tiên là 'tomato'. Nếu giá trị của groceryItem bằng 'tomato', thì console.log() trong case này sẽ được thực thi.
+
+Giá trị của groceryItem là 'papaya', vì vậy case thứ ba sẽ được thực thi— "Papayas are $1.29" được in ra màn hình.
+
+Từ khóa break yêu cầu máy tính thoát khỏi khối và không thực thi thêm mã hay kiểm tra các case khác trong khối mã. Lưu ý: Nếu không có từ khóa break, case đầu tiên khớp sẽ chạy, nhưng tất cả các case tiếp theo cũng sẽ chạy, bất kể có khớp hay không—bao gồm cả default. Điều này khác với các câu lệnh if/else chỉ thực thi một khối mã.
+
+Cuối mỗi câu lệnh switch, có một câu lệnh default. Nếu không có case nào đúng, mã trong default sẽ được thực thi.
