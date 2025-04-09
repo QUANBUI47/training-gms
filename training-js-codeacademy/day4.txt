@@ -1,0 +1,122 @@
+1. Functions as Data
+Trong JavaScript, hàm (functions) hoạt động giống như bất kỳ kiểu dữ liệu nào khác trong ngôn ngữ; chúng ta có thể gán hàm cho biến (variables), và có thể gán lại chúng cho các biến mới.
+rong JavaScript, hàm là đối tượng hạng nhất (first-class objects). Điều này nghĩa là, giống như các đối tượng (objects) khác, các hàm trong JavaScript có thể có thuộc tính (properties) và phương thức (methods).
+
+Vì hàm là một dạng đặc biệt của đối tượng, chúng có các thuộc tính như .length và .name, cũng như các phương thức như .toString(). Bạn có thể tìm hiểu thêm trong tài liệu chính thức của JavaScript.
+
+2. Functions as Parameters
+Như bạn đã biết, tham số (parameter) là một chỗ giữ chỗ cho dữ liệu được truyền vào trong một hàm.
+Vì trong JavaScript, hàm (functions) có thể hoạt động giống như bất kỳ kiểu dữ liệu nào khác, nên sẽ không quá ngạc nhiên khi biết rằng hàm có thể được truyền vào như tham số của hàm khác.
+
+Một hàm bậc cao (higher-order function) là một hàm có thể nhận các hàm khác làm tham số, trả về một hàm, hoặc cả hai!
+Chúng ta gọi các hàm được truyền vào dưới dạng tham số là hàm gọi lại (callback functions).
+Hàm callback sẽ được gọi (invoke) trong quá trình thực thi của hàm bậc cao.
+
+Khi ta gọi một hàm bậc cao và truyền vào một hàm khác làm đối số, chúng ta không gọi hàm đó ngay. Nếu gọi (dùng dấu ngoặc), ta sẽ truyền vào giá trị trả về của hàm đó.
+Với callback, ta chỉ cần truyền vào tên của hàm, không có dấu ngoặc
+
+3. The .forEach() Method
+.forEach() sẽ thực thi cùng một đoạn mã cho mỗi phần tử trong mảng.
+.forEach() nhận một hàm callback làm đối số.
+Giá trị trả về của .forEach() luôn là undefined.
+
+4. The .map() Method
+Khi gọi .map() trên một mảng, nó sẽ:
+
+Nhận vào một hàm callback làm đối số
+
+Trả về một mảng mới, với mỗi phần tử là kết quả của việc áp dụng hàm callback lên từng phần tử trong mảng gốc.
+.map() hoạt động tương tự với .forEach(), nhưng điểm khác biệt lớn nhất là:
+
+.map() luôn trả về một mảng mới.
+
+.forEach() thì không (nó trả về undefined).
+
+5. The .filter() Method
+Tương tự như .map(), phương thức .filter() cũng trả về một mảng mới. Tuy nhiên, .filter() sẽ lọc ra những phần tử từ mảng gốc thỏa mãn một điều kiện nhất định.
+
+àm callback truyền vào .filter() sẽ trả về true hoặc false dựa trên phần tử được xét:
+
+Nếu trả về true, phần tử đó sẽ được thêm vào mảng mới.
+
+Nếu trả về false, phần tử đó sẽ bị loại bỏ.
+
+6. The .findIndex() Method
+Gọi .findIndex() trên một mảng sẽ trả về chỉ số (index) của phần tử đầu tiên mà hàm callback trả về giá trị true.
+Trả về -1 nếu không có phần tử nào trong mảng thỏa mãn điều kiện.
+
+7. The .reduce() Method
+Phương thức .reduce() trả về một giá trị duy nhất sau khi duyệt qua tất cả các phần tử trong mảng, bằng cách kết hợp chúng lại theo một logic cụ thể do bạn xác định trong hàm callback.
+Bạn có thể truyền một tham số thứ hai cho .reduce() để chỉ định giá trị khởi tạo cho accumulator.
+
+8. Creating Object Literals
+ác đối tượng (objects) có thể được gán cho biến giống như bất kỳ kiểu dữ liệu nào trong JavaScript. Chúng ta sử dụng dấu ngoặc nhọn {} để xác định một đối tượng literal
+Chúng ta có thể điền dữ liệu vào một đối tượng dưới dạng các cặp khóa-giá trị (key-value pairs). Một khóa (key) giống như tên một biến, trỏ đến một vị trí trong bộ nhớ mà lưu giữ một giá trị (value).
+
+Giá trị của một khóa có thể là bất kỳ kiểu dữ liệu nào trong JavaScript, kể cả hàm hoặc đối tượng khác.
+
+Ta tạo một cặp key-value bằng cách viết tên của key, theo sau là dấu hai chấm : và sau đó là giá trị. Các cặp key-value được phân cách nhau bởi dấu phẩy ,.
+
+Các key là chuỗi (string), nhưng nếu key không chứa ký tự đặc biệt, JavaScript cho phép bỏ dấu nháy.
+
+9. Accessing Properties
+Có hai cách để chúng ta truy cập vào thuộc tính của một đối tượng. Hãy cùng tìm hiểu cách đầu tiên — cú pháp dấu chấm (dot notation): .
+Với dot notation, ta viết tên đối tượng, theo sau là dấu chấm (.), rồi đến tên thuộc tính (khóa)
+Nếu chúng ta cố truy cập một thuộc tính không tồn tại trong đối tượng, kết quả trả về sẽ là undefined
+
+10. Bracket Notation
+Cách thứ hai để truy cập giá trị của một khóa (key) là sử dụng cú pháp ngoặc vuông: [ ].
+Để sử dụng bracket notation với đối tượng, bạn đưa tên thuộc tính (key) vào bên trong dấu ngoặc vuông dưới dạng chuỗi (string)
+Chúng ta bắt buộc phải dùng cú pháp ngoặc vuông khi các khóa:
+
+Chứa khoảng trắng (space),
+
+Có ký tự đặc biệt (special characters),
+
+Hoặc là số.
+
+11. Property Assignment
+Sau khi chúng ta định nghĩa một object, chúng ta không bị ràng buộc phải giữ nguyên tất cả các thuộc tính đã viết ban đầu.
+👉 Object trong JavaScript là “mutable”, có nghĩa là ta có thể cập nhật (update) nó sau khi tạo!
+
+Chúng ta có thể sử dụng dot notation (.) hoặc bracket notation ([]), kết hợp với toán tử gán (=) để:
+
+Thêm cặp key-value mới
+
+Hoặc thay đổi giá trị của một thuộc tính hiện có
+🧠 Hai trường hợp khi gán thuộc tính:
+Nếu thuộc tính đã tồn tại:
+Giá trị cũ sẽ bị ghi đè bởi giá trị mới.
+
+Nếu thuộc tính chưa tồn tại:
+Một thuộc tính mới sẽ được thêm vào object
+Nếu bạn khai báo object bằng const, bạn không thể gán lại toàn bộ object, nhưng vẫn có thể thay đổi nội dung bên trong.
+
+Sử dụng từ khóa delete để xóa một thuộc tính khỏi object:
+
+12. Methods
+Khi một giá trị trong object là một hàm (function), ta gọi nó là một method (phương thức).
+
+🔹 Thuộc tính (property) là thứ object "có"
+🔹 Phương thức (method) là thứ object "làm"
+
+
+Gọi phương thức:
+Sử dụng dấu . và cặp ()
+
+13. Nested Objects
+Trong các ứng dụng thực tế, object thường được lồng nhau — một object có thể chứa một object khác như một thuộc tính, và object đó lại có thể chứa một mảng, hoặc thậm chí nhiều object khác nữa!
+
+
+14. Pass By Reference
+Trong JavaScript, object được truyền theo tham chiếu. Điều này có nghĩa là khi ta truyền một biến (gán với một object) vào trong hàm, máy tính sẽ hiểu tên tham số là một tham chiếu đến vùng nhớ đang chứa object đó.
+
+➡️ Kết quả là: hàm có thể thay đổi trực tiếp thuộc tính của object, và những thay đổi này mãi mãi ảnh hưởng đến object ban đầu, ngay cả khi object đó được khai báo bằng const.
+
+15. Looping Through Objects
+òng lặp (loops) là công cụ lập trình giúp lặp lại một khối mã cho đến khi điều kiện không còn đúng nữa.
+
+Chúng ta đã học cách lặp qua mảng (arrays) bằng cách dùng chỉ số (index), nhưng các cặp key-value trong object không có thứ tự! Vì vậy, JavaScript cung cấp cho chúng ta một cú pháp khác để duyệt object: for...in.
+
+
+
