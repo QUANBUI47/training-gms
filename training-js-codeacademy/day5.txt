@@ -1,0 +1,46 @@
+1. The this Keyword
+Từ khóa this tham chiếu đến đối tượng gọi phương thức, cho phép truy cập các thuộc tính của đối tượng đó. Trong ví dụ trên, đối tượng gọi là goat, và bằng cách sử dụng this, chúng ta đang truy cập chính đối tượng goat, sau đó truy cập thuộc tính dietType của goat bằng cú pháp dấu chấm.
+
+2. Arrow Functions and this
+Hàm mũi tên tự động gắn (bind) một giá trị this đã được xác định trước với chính hàm đó, và giá trị này không phải là đối tượng gọi.
+ Điều quan trọng cần nhớ:
+Tránh sử dụng hàm mũi tên nếu bạn cần sử dụng this trong một phương thức!
+
+3. Getters
+Getters là các phương thức (methods) được sử dụng để lấy và trả về các thuộc tính bên trong của một đối tượng (object).
+Lợi ích khi sử dụng getter:
+Có thể xử lý dữ liệu trước khi trả về.
+
+Có thể kiểm tra điều kiện và trả về giá trị tương ứng.
+
+Truy cập thuộc tính nội bộ thông qua this.
+
+Giúp người khác hiểu rõ hơn mục đích và cách sử dụng code.
+Không được đặt tên thuộc tính trùng với tên phương thức getter. Nếu không sẽ dẫn đến vòng lặp vô hạn (infinite call stack error).
+
+Cách khắc phục: thêm dấu gạch dưới _ trước tên thuộc tính 
+
+4. Setters
+Cùng với getters, chúng ta có thể sử dụng setters để gán lại giá trị cho các thuộc tính đã có trong một object.
+Lợi ích của setter:
+Kiểm tra giá trị đầu vào trước khi cập nhật thuộc tính.
+
+Cho phép xử lý logic tùy chỉnh khi gán giá trị.
+
+Dễ đọc, dễ hiểu khi dùng trong code.
+
+5. Factory Functions
+ Nhưng nếu muốn tạo nhiều object cùng loại, cách thủ công sẽ rất mất thời gian. Lúc này, chúng ta cần đến factory function – tức là một hàm trả về object, có thể tái sử dụng để tạo nhiều bản sao của object đó.
+ Lợi ích:
+Dễ dàng tạo nhiều đối tượng tương tự nhau.
+
+Giảm việc lặp lại code.
+
+Có thể tùy biến object bằng cách truyền tham số.
+
+
+6. Property Value Shorthand 
+ES6 đã giới thiệu một cách viết rút gọn khi khai báo thuộc tính cho object — gọi là property value shorthand (rút gọn giá trị thuộc tính). Điều này rất hữu ích khi bạn có biến và tên thuộc tính trùng nhau.
+
+
+7. Destructured Assignment

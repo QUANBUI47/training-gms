@@ -1,0 +1,109 @@
+1. console.log
+Console là một bảng hiển thị các thông báo quan trọng, chẳng hạn như lỗi (errors), dành cho các nhà phát triển. Khi máy tính chạy mã của chúng ta, hầu hết các hoạt động diễn ra ở phía sau và không hiển thị trực tiếp. Nếu chúng ta muốn xem kết quả của mã, chúng ta có thể in (print) hoặc ghi (log) nó vào console.
+
+Trong JavaScript, từ khóa console là một đối tượng (object) chứa nhiều dữ liệu và hành động mà chúng ta có thể sử dụng. Từ khóa (keyword) là những từ có sẵn trong ngôn ngữ JavaScript mà máy tính nhận diện và xử lý theo cách đặc biệt.
+
+Một hành động quan trọng trong console là phương thức .log(). Khi chúng ta viết console.log(), mọi thứ bên trong dấu ngoặc đơn sẽ được hiển thị trong bảng console.
+
+2. Comments
+Lập trình thường là một công việc hợp tác (collaborative). Ngoài ra, ngay cả với mã do chính chúng ta viết, sau một thời gian quay lại (thậm chí chỉ một giờ sau), nó cũng có thể trở nên khó hiểu. Vì vậy, việc để lại chú thích (comments) trong mã là một điều rất hữu ích, giúp người khác (hoặc chính chúng ta) hiểu được mục đích của đoạn mã.
+
+Khi viết JavaScript, chúng ta có thể thêm các dòng chú thích (comments) vào mã của mình. Những dòng này không được máy tính thực thi, chúng chỉ dành cho người đọc.
+
+3. Data Types
+Kiểu dữ liệu là cách chúng ta phân loại các loại dữ liệu khác nhau khi lập trình. Trong JavaScript, có tám kiểu dữ liệu cơ bản:
+Number(Số), BigIn(Số lớn), String(chuỗi), Boolean(Đúng/ Sai), Null(Giá trị rỗng), Undefined(Không xác định), Symbol(Biểu tượng), Object(Đối tượng)
+
+4. Arithmetic Operators
+Khi lập trình, các phép toán số học rất quan trọng và được sử dụng thường xuyên.
+
+Toán tử là gì?
+Toán tử (operator) là một ký tự đặc biệt thực hiện một nhiệm vụ trong mã của chúng ta.
+
+JavaScript có nhiều toán tử số học tích hợp sẵn, giúp thực hiện các phép tính toán trên số.
+
+5. String Concatenation
+Trong JavaScript, toán tử + không chỉ dùng để cộng số, mà còn có thể nối chuỗi lại với nhau.
+Quá trình nối chuỗi này gọi là "concatenation".
+Máy tính sẽ ghép hai chuỗi chính xác như chúng ta viết, không tự động thêm khoảng trắng!
+
+6. Properties
+Khi bạn đưa một dữ liệu mới vào chương trình JavaScript, trình duyệt sẽ lưu nó dưới dạng một instance của kiểu dữ liệu.
+
+Tất cả các kiểu dữ liệu đều có các thuộc tính riêng mà chúng ta có thể truy cập. Ví dụ, mỗi chuỗi (string) đều có một thuộc tính gọi là .length, lưu trữ số lượng ký tự trong chuỗi đó. Bạn có thể lấy thông tin thuộc tính bằng cách thêm dấu chấm (.) và tên thuộc tính vào chuỗi.
+
+7. Methods
+Nhớ rằng phương thức (methods) là các hành động mà chúng ta có thể thực hiện trên dữ liệu. Mỗi kiểu dữ liệu có những phương thức riêng giúp chúng ta xử lý các instance của kiểu dữ liệu đó. JavaScript cung cấp nhiều phương thức cho chuỗi (string).
+
+Để gọi (hoặc sử dụng) những phương thức này, ta thêm dấu chấm (.) sau đó là tên phương thức và dấu ngoặc đơn (parentheses).
+
+8. Built-in Object
+Ngoài console, JavaScript còn cung cấp nhiều đối tượng tích hợp sẵn khác. Sau này, bạn sẽ tự tạo đối tượng của riêng mình, nhưng hiện tại, những đối tượng tích hợp sẵn này mang lại nhiều tính năng hữu ích.
+
+Ví dụ, nếu bạn muốn thực hiện các phép toán phức tạp hơn các phép toán cơ bản, JavaScript có một đối tượng tích hợp sẵn gọi là Math.
+
+Điều tuyệt vời về các đối tượng là chúng có các phương thức! Chúng ta có thể gọi phương thức .random() từ đối tượng Math tích hợp sẵn
+
+9. Variables
+Biến là một "hộp chứa" dữ liệu. Bạn có thể nghĩ về biến như một container chứa thông tin trong bộ nhớ của máy tính. Thông tin lưu trữ trong các biến, như tên người dùng, số tài khoản, hoặc thậm chí lời chào cá nhân, có thể được tìm thấy trong bộ nhớ.
+
+Biến cung cấp cách đặt tên mô tả cho dữ liệu, giúp các chương trình dễ hiểu hơn đối với người đọc và chính chúng ta khi xem lại mã sau này.
+
+Các thao tác chính với biến:
+Tạo biến với một tên mô tả.
+
+Lưu trữ hoặc cập nhật thông tin trong biến.
+
+Truy xuất thông tin lưu trữ trong biến.
+
+Biến không phải là giá trị, mà là một đại diện cho giá trị, nơi giá trị đó được lưu trữ trong bộ nhớ và có thể được gọi ra sử dụng thông qua tên của biến.
+
+Các từ khóa để tạo biến:
+var: Dùng để khai báo biến (nhưng không còn được khuyến khích trong ES6+).
+
+let: Dùng để khai báo biến có thể thay đổi giá trị.
+
+const: Dùng để khai báo biến có giá trị không thay đổi.
+
+10. Create a Variable: var
+Có rất nhiều thay đổi được giới thiệu trong phiên bản ES6 của JavaScript vào năm 2015. Một trong những thay đổi lớn nhất là hai từ khóa mới, let và const, dùng để tạo ra hoặc khai báo biến. Trước ES6, các lập trình viên chỉ có thể sử dụng từ khóa var để khai báo biến.
+Có một vài quy tắc chung khi đặt tên biến:
+
+Tên biến không thể bắt đầu bằng số.
+
+Tên biến phân biệt chữ hoa chữ thường, do đó myName và myname sẽ là hai biến khác nhau. Không nên tạo hai biến có cùng tên nhưng khác nhau về chữ hoa chữ thường.
+
+Tên biến không thể trùng với các từ khóaCó một vài quy tắc chung khi đặt tên biến:
+
+Tên biến không thể bắt đầu bằng số.
+
+Tên biến phân biệt chữ hoa chữ thường, do đó myName và myname sẽ là hai biến khác nhau. Không nên tạo hai biến có cùng tên nhưng khác nhau về chữ hoa chữ thường.
+
+Tên biến không thể trùng với các từ khóa
+
+11. Create a Variable: let
+Như đã đề cập trong bài tập trước, từ khóa let được giới thiệu trong ES6. Từ khóa let cho phép biến có thể được gán lại một giá trị khác.
+Một khái niệm khác mà chúng ta cần lưu ý khi sử dụng let (và thậm chí cả var) là chúng ta có thể khai báo một biến mà không gán giá trị cho biến đó. Trong trường hợp này, biến sẽ được tự động khởi tạo với giá trị undefined
+
+12. Create a Variable: const
+Từ khóa const cũng được giới thiệu trong ES6 và là từ viết tắt của "constant" (hằng số). Giống như với var và let, bạn có thể lưu trữ bất kỳ giá trị nào vào một biến const. Cách bạn khai báo và gán giá trị cho biến const theo cùng cấu trúc với let và var.
+Tuy nhiên, một biến const không thể được gán lại giá trị vì nó là hằng số. Nếu bạn cố gắng gán lại giá trị cho một biến const, bạn sẽ nhận được lỗi TypeError.
+
+Biến hằng số phải được gán giá trị khi khai báo. Nếu bạn cố gắng khai báo một biến const mà không gán giá trị, bạn sẽ nhận được lỗi cú pháp SyntaxError.
+
+Nếu bạn đang phân vân giữa việc sử dụng let hay const, hãy nghĩ về việc bạn có cần phải gán lại giá trị cho biến hay không. Nếu bạn cần gán lại giá trị, sử dụng let; nếu không cần, hãy sử dụng const.
+
+13. Mathematical Assignment Operators
+Chúng ta có thể sử dụng biến và toán tử toán học để tính toán giá trị mới và gán lại cho một biến. 
+
+14. The Increment and Decrement Operator
+Các toán tử gán toán học khác bao gồm toán tử tăng (++) và toán tử giảm (--).
+
+Toán tử tăng sẽ làm tăng giá trị của biến lên 1.
+
+Toán tử giảm sẽ làm giảm giá trị của biến đi 1.
+
+15. String Concatenation with Variables
+Toán tử + có thể được sử dụng để kết hợp hai giá trị chuỗi ngay cả khi những giá trị đó đang được lưu trữ trong các biến.
+
+16. 

@@ -1,0 +1,234 @@
+1. Function Declarations
+Trong JavaScript, có nhiều cách để tạo một hàm (function). Một trong những cách đó là sử dụng function declaration (khai báo hàm).
+
+Tương tự như việc khai báo biến sẽ gán giá trị cho một tên biến, khai báo hàm sẽ gán một khối mã (hàm) cho một tên gọi (identifier).
+
+2. Calling a Function
+Khai báo hàm không yêu cầu mã trong thân hàm chạy — nó chỉ đơn giản là xác định sự tồn tại của hàm đó.
+Mã bên trong thân hàm sẽ chỉ được thực thi khi hàm được gọi.
+
+Để gọi một hàm trong mã của bạn, bạn chỉ cần gõ tên hàm theo sau là cặp dấu ngoặc đơn ().
+Lệnh gọi hàm này sẽ thực thi toàn bộ thân hàm, tức là tất cả các câu lệnh nằm trong cặp dấu ngoặc nhọn {} của hàm đó.
+
+Chúng ta có thể gọi cùng một hàm bao nhiêu lần tùy ý.
+
+3. Parameters and Arguments
+Từ trước đến giờ, các hàm chúng ta tạo đều chạy mà không có đầu vào (input). Tuy nhiên, nhiều hàm trong lập trình có thể nhận đầu vào (input) để thực hiện một công việc cụ thể.
+
+Khi khai báo một hàm, bạn có thể chỉ định các tham số (parameters).
+Tham số là chỗ trống đại diện cho dữ liệu sẽ được truyền vào hàm khi nó được gọi.
+
+4. Default Parameters
+Tham số mặc định cho phép bạn gán sẵn một giá trị cho tham số trong trường hợp:
+
+Không truyền đối số nào vào khi gọi hàm, hoặc
+
+Giá trị đối số là undefined.
+
+
+5. Return
+Khi bạn gọi một hàm, máy tính sẽ chạy qua phần thân của hàm và tính toán kết quả. Nhưng nếu không có lệnh return, giá trị trả về mặc định sẽ là undefined.
+return giúp trả kết quả ra bên ngoài để sử dụng sau này — ví dụ như gán cho biến, hoặc in ra.
+Khi return được thực thi, mọi dòng phía sau trong hàm sẽ bị bỏ qua.
+
+6. Helper Functions
+Chúng ta có thể sử dụng giá trị trả về từ một hàm bên trong một hàm khác. Những hàm như vậy thường được gọi là hàm hỗ trợ (helper functions).
+
+Việc chia nhỏ các chức năng thành từng hàm riêng giúp cho:
+
+Dễ đọc hơn
+
+Dễ sửa lỗi (debug) hơn
+
+7. Function Expressions
+có thể định nghĩa hàm theo 2 cách chính:
+
+Function Declaration (Khai báo hàm)
+→ Được hoisting (có thể gọi trước khi khai báo).
+Function Expression (Biểu thức hàm)
+→ Không được hoisting (phải khai báo trước khi gọi).
+→ Gán một anonymous function (hàm không tên) cho một biến.
+
+8. Arrow Functions
+cú pháp arrow function (hàm mũi tên), một cách viết ngắn gọn hơn để khai báo hàm bằng cách sử dụng ký hiệu đặc biệt “fat arrow” (=>).
+
+Arrow function là một cách viết gọn gàng và súc tích hơn so với cú pháp khai báo hàm truyền thống.
+
+Arrow functions loại bỏ sự cần thiết phải gõ từ khóa function mỗi khi bạn muốn tạo một hàm. Thay vào đó, bạn chỉ cần đặt các tham số bên trong dấu ngoặc đơn ( ), sau đó thêm dấu mũi tên =>, rồi viết phần thân hàm bên trong cặp dấu ngoặc nhọn { }
+
+9. Concise Body Arrow Functions
+JavaScript cũng cung cấp nhiều cách để rút gọn cú pháp hàm mũi tên (arrow function). Dạng ngắn gọn nhất của một hàm được gọi là concise body (thân hàm rút gọn). 
+Các hàm chỉ có một tham số thì không cần đặt tham số đó trong dấu ngoặc đơn. Tuy nhiên, nếu hàm có không có tham số hoặc có nhiều hơn một tham số, thì bắt buộc phải có ngoặc đơn.
+Nếu thân hàm chỉ có một dòng duy nhất, thì không cần dấu ngoặc nhọn {}. Khi không có dấu ngoặc nhọn, giá trị của dòng đó sẽ được trả về tự động. Nội dung của dòng đó nên viết ngay sau dấu mũi tên => và không cần dùng từ khóa return. Đây được gọi là implicit return (trả về ngầm định).
+
+10. Blocks and Scope
+Một block là đoạn mã được đặt bên trong cặp dấu ngoặc nhọn {}. Các khối giúp chúng ta nhóm một hoặc nhiều câu lệnh lại với nhau và đóng vai trò như cột mốc cấu trúc quan trọng trong mã của bạn.
+
+11. Global Scope
+Scope (phạm vi) là ngữ cảnh mà trong đó các biến được khai báo.
+Chúng ta thường nói đến scope trong mối quan hệ với các khối lệnh (blocks), bởi vì biến có thể tồn tại bên trong hoặc bên ngoài các khối này.
+
+
+Khi một biến được khai báo bên ngoài tất cả các khối lệnh, thì nó có phạm vi toàn cục (global scope). Những biến này được gọi là biến toàn cục (global variables).
+
+ Vì không bị giới hạn trong bất kỳ khối nào, nên các biến toàn cục có thể được truy cập bởi bất kỳ đoạn mã nào trong chương trình — kể cả các khối lệnh (ví dụ như hàm).
+
+12. Block Scope
+Trong JavaScript, khi một biến được khai báo bên trong một khối lệnh (tức là trong dấu {}), thì nó chỉ có thể được truy cập trong chính khối đó.
+Chúng ta nói rằng biến có “block scope” — nghĩa là nó bị giới hạn trong phạm vi của khối.
+
+Biến cục bộ (Local Variables)
+Các biến có block scope thường được gọi là biến cục bộ, vì chúng chỉ tồn tại và được sử dụng trong cùng khối mà chúng được khai báo.
+
+13. Scope Pollution
+Khi bạn khai báo biến toàn cục, chúng nằm trong global namespace (không gian tên toàn cục).
+
+Những biến này có thể được truy cập ở bất cứ đâu trong chương trình.
+
+Tuy nhiên, chúng sẽ tồn tại cho đến khi chương trình kết thúc, khiến không gian toàn cục chất đầy biến.
+
+
+ Scope Pollution là gì?
+Là khi:
+
+Bạn có quá nhiều biến toàn cục.
+
+Bạn tái sử dụng tên biến ở các phạm vi khác nhau (dễ gây nhầm lẫn hoặc ghi đè lẫn nhau).
+
+14. Practice Good Scoping
+Với những rắc rối mà biến toàn cục và scope pollution gây ra, chúng ta nên tuân theo các nguyên tắc tốt khi khai báo biến – đó là:
+
+"Hãy giới hạn phạm vi của biến chặt chẽ nhất có thể."
+ Lợi ích:
+ Mã dễ đọc hơn, vì được tổ chức rõ ràng theo từng khối.
+
+ Dễ hiểu, vì biết biến nào thuộc phần nào của chương trình.
+
+ Dễ bảo trì – sửa phần này không ảnh hưởng phần khác.
+
+ Tiết kiệm bộ nhớ – biến biến mất sau khi block chạy xong.
+
+15. Create an Array
+Một cách để tạo mảng trong JavaScript là sử dụng array literal.
+
+Array literal là cách tạo mảng bằng cách bao các phần tử trong dấu ngoặc vuông [].
+
+mảng có thể lưu mọi kiểu dữ liệu — bạn có thể tạo mảng với cùng một kiểu dữ liệu hoặc nhiều kiểu dữ liệu khác nhau.
+
+16. Accessing Elements
+Mỗi phần tử trong mảng có một vị trí được đánh số gọi là chỉ mục (index).
+Ta có thể truy cập từng phần tử bằng cách dùng chỉ mục của nó, giống như chọn một món trong danh sách bằng vị trí của nó.
+
+ JavaScript sử dụng chỉ mục bắt đầu từ 0 (zero-indexed)
+
+17. Update Elements
+ bạn đã học cách truy cập các phần tử bên trong một mảng hoặc chuỗi bằng cách sử dụng chỉ số (index). Một khi bạn đã truy cập được một phần tử trong mảng, bạn cũng có thể cập nhật giá trị của nó.
+
+18. Arrays with let and const
+Bạn có thể nhớ rằng trong JavaScript, bạn có thể khai báo biến bằng từ khóa let và const.
+
+Biến khai báo bằng let có thể gán lại giá trị mới.
+
+Biến khai báo bằng const không thể gán lại biến mới, nhưng có thể thay đổi nội dung bên trong, nếu nó là một mảng hoặc đối tượng.
+
+ Tóm lại: const không ngăn bạn chỉnh sửa nội dung của mảng — nó chỉ ngăn bạn gán một mảng khác hoàn toàn vào biến đó.
+
+19. The .length property
+Một trong những thuộc tính có sẵn của mảng là .length, và nó trả về số phần tử trong mảng.
+
+Chúng ta truy cập thuộc tính .length giống như khi làm với chuỗi (string).
+
+
+20. The .push() Method
+Một trong những phương thức phổ biến là .push() — cho phép bạn thêm phần tử vào cuối mảng.
+.push() được gọi bằng dấu chấm sau tên mảng: itemTracker.push(...).
+
+Nó thay đổi mảng ban đầu bằng cách thêm phần tử mới vào cuối.
+
+Bạn có thể thêm 1 hoặc nhiều phần tử cùng lúc, cách nhau bằng dấu phẩy.
+
+Vì .push() thay đổi mảng gốc nên nó được gọi là một phương thức phá huỷ (destructive
+
+21. 
+The .pop() Method
+Phương thức .pop() giúp xoá phần tử cuối cùng trong một mảng.
+.pop() không cần đối số.
+
+Nó sẽ xoá phần tử cuối cùng trong mảng.
+
+Nó trả về phần tử bị xoá, nên bạn có thể gán kết quả đó vào một biến nếu cần.
+
+.pop() là một phương thức mutate — nghĩa là nó thay đổi mảng gốc.
+
+22. More Array Methods
+Trong JavaScript, ngoài .push() và .pop() — có rất nhiều phương thức giúp làm việc với mảng dễ dàng hơn.
+
+ Một số phương thức làm thay đổi mảng gốc (gọi là mutating methods), như:
+
+.push() – thêm phần tử cuối
+
+.pop() – xoá phần tử cuối
+
+.shift() – xoá phần tử đầu
+
+.unshift() – thêm phần tử vào đầu
+
+.splice() – thêm/xoá phần tử theo chỉ số
+
+ Một số phương thức không làm thay đổi mảng gốc (gọi là non-mutating methods), như:
+
+.slice() – sao chép một phần của mảng
+
+.join() – nối các phần tử thành chuỗi
+
+.concat() – nối hai mảng lại với nhau
+
+.indexOf() – tìm chỉ số của một phần tử
+
+
+23. Arrays and Functions
+Chúng ta đã học rằng mảng là mutable (có thể thay đổi).
+ Khi bạn truyền mảng vào hàm, bạn đang truyền tham chiếu đến vùng nhớ của mảng đó (pass-by-reference). Vì vậy nếu hàm thay đổi mảng, thay đổi đó sẽ tồn tại sau khi hàm chạy xong.
+
+24. Nested Arrays
+Trước đó chúng ta đã đề cập rằng mảng có thể chứa các mảng khác. Khi một mảng chứa mảng khác, ta gọi đó là mảng lồng nhau (nested array)
+Để truy cập vào mảng lồng bên trong, ta dùng cú pháp ngoặc vuông [] và chỉ số (index) giống như khi truy cập bất kỳ phần tử nào khác trong mảng
+Nếu ta muốn truy cập sâu hơn vào phần tử bên trong mảng lồng này, ta nối thêm các cặp dấu ngoặc vuông [] để chỉ rõ phần tử
+
+25. The For Loop
+Vòng lặp for thường bao gồm một biến lặp (iterator). Biến này sẽ:
+
+Được khởi tạo
+
+Được kiểm tra điều kiện dừng
+
+Được cập nhật sau mỗi lần lặp
+
+26. Looping in Reverse
+Cách viết vòng lặp for ngược:
+Khởi tạo biến lặp với giá trị lớn nhất (ví dụ: 3)
+
+Dùng điều kiện dừng như >= để dừng khi biến còn lớn hơn hoặc bằng 0
+
+Giảm giá trị biến lặp sau mỗi vòng (i--)
+
+27. Looping through Arrays
+Để lặp qua từng phần tử trong một mảng, vòng lặp for nên sử dụng thuộc tính .length của mảng trong điều kiện dừng (stopping condition).
+
+28. Nested Loops
+Khi một vòng lặp chạy bên trong một vòng lặp khác, ta gọi đó là vòng lặp lồng nhau.
+Một ứng dụng thường gặp của vòng lặp lồng nhau là để so sánh các phần tử giữa hai mảng.
+Với mỗi vòng lặp của vòng ngoài, vòng lặp bên trong sẽ chạy toàn bộ.
+
+
+29. The While Loop
+ Khi nào dùng while?
+Khi không biết trước số lần cần lặp.
+
+Ví dụ: "Tôi sẽ ăn khi nào còn đói", chứ không phải "Tôi sẽ ăn 5 miếng".
+
+30. Do...While Statements
+Trong một số trường hợp, bạn muốn một đoạn mã chạy ít nhất một lần, rồi mới kiểm tra điều kiện để tiếp tục lặp lại. Đó là lúc sử dụng do...while.
+
+31. The break Keyword
+ Khi bạn muốn dừng vòng lặp sớm — dù điều kiện kết thúc ban đầu vẫn chưa xảy ra — bạn dùng từ khóa break.
